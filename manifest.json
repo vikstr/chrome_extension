@@ -1,0 +1,13 @@
+{
+  "name": "Расширение для браузера Google chrome",
+  "description": "Test",
+  "version":"1.0",
+  "manifest_version": 2,
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js" : ["get.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
