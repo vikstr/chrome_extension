@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <link href="src/styles.css" rel="stylesheet">
+</head>
+<body>
+<div id="user-window">
+  <form>
+      <img src="images/smile_header.svg" alt="smile">
+      <h1>emovie.live</h1>
+      <div class="container">
+        <input type="text" id="login-field" name="login" placeholder="Логин">
+        <input type="text" id="password-field" name="password" placeholder="Пароль">
+        <input type="file" id="field-file" name="file">
+        <label for="field-file">Загрузить файл</label>
+        <button>Войти анонимно</button>
+      </div>
+  </form>
+</div>
+
+<div id="chat">
+  <div class="container">
+    <div class="flex-wrapper">
+    </div>
+  </div>
+  <div class="field-container for-input">
+    <div class="circle"></div>
+    <input type="text" class="message" placeholder="Введите сообщение" id="message-field" name="message">
+  </div>
+</div>
+
+<br>
+
+<script src="dist/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+{
+  "name": "extension",
+  "version": "1.0.0",
+  "description": "",
+  "main": "youtube.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack-dev-server --mode development --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vikstr/extension.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vikstr/extension/issues"
+  },
+  "homepage": "https://github.com/vikstr/extension#readme",
+  "devDependencies": {
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.0",
+    "webpack-dev-server": "^3.3.1"
+  }
+}

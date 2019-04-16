@@ -1,0 +1,73 @@
+#user-window {
+  width: 312px;
+  border: 1px solid black;
+  position: relative;
+  padding-bottom: 30px;
+  box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.3);
+}
+#user-window img[alt="smile"] {
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  left: 20px;
+  top: 13px;
+}
+#user-window h1 {
+  padding: 20px;
+  text-align: center;
+  margin: 0;
+}
+#user-window .container {
+  width: 243px;
+  margin-top: 26px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#user-window .container input {
+  width: 245px;
+  height: 40px;
+  border-radius: 15px;
+  padding: 10px 15px;
+  box-sizing: border-box;
+  outline: none;
+  font-size: 18px;
+  border: 1px solid black;
+}
+#user-window .container input[name="password"] {
+  margin-top: 20px;
+}
+#user-window .container label[for="field-file"] {
+  font-size: 20px;
+  text-align: center;
+  display: block;
+  margin-top: 30px;
+  cursor: pointer;
+  background: url("cloud.svg") no-repeat 10px center;
+  background-clip: unset;
+  height: 40px;
+  line-height: 40px;
+  vertical-align: middle;
+}
+#user-window .container input[type="file"] {
+  display: none;
+}
+#user-window .container img[alt="upload"] {
+  float: left;
+  margin-top: 27px;
+  margin-left: 10px;
+}
+#user-window .container button {
+  margin-top: 25px;
+  outline: none;
+  background-image: linear-gradient(to bottom, #FFE261, #ffeb94);
+  width: 185px;
+  height: 50px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  font-size: 18px;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+  border: none;
+  display: block;
+}
