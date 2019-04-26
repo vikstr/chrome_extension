@@ -1,6 +1,6 @@
 {
-  "name": "Расширение",
-  "description": "Test2",
+  "name": "Расширение для браузера Google chrome",
+  "description": "Test",
   "version":"1.0",
   "manifest_version": 2,
   "browser_action": {
@@ -11,7 +11,8 @@
   "content_scripts": [
     {
       "matches": ["https://www.youtube.com/*"],
-      "js" : ["youtube.js"],
+	  "css": ["styles.css"],
+      "js" : ["message.js"],
       "run_at": "document_end"
     }
   ]

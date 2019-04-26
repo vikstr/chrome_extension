@@ -1,0 +1,146 @@
+#user-window {
+  width: 312px;
+  border: 1px solid black;
+  position: relative;
+  padding-bottom: 30px;
+  box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.3);
+  display: none;
+}
+#user-window img[alt="smile"] {
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  left: 20px;
+  top: 13px;
+}
+#user-window h1 {
+  padding: 20px;
+  text-align: center;
+  margin: 0;
+}
+#user-window .container {
+  width: 243px;
+  margin-top: 26px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#user-window .container input {
+  width: 245px;
+  height: 40px;
+  border-radius: 15px;
+  padding: 10px 15px;
+  box-sizing: border-box;
+  outline: none;
+  font-size: 18px;
+  border: 1px solid black;
+}
+#user-window .container input[name="password"] {
+  margin-top: 20px;
+}
+#user-window .container label[for="field-file"] {
+  font-size: 20px;
+  text-align: center;
+  display: block;
+  margin-top: 30px;
+  cursor: pointer;
+  background: url("../images/upload.svg") no-repeat 10px center;
+  background-clip: unset;
+  height: 40px;
+  line-height: 40px;
+  vertical-align: middle;
+}
+#user-window .container input[type="file"] {
+  display: none;
+}
+#user-window .container img[alt="upload"] {
+  float: left;
+  margin-top: 27px;
+  margin-left: 10px;
+}
+#user-window .container button {
+  margin-top: 25px;
+  outline: none;
+  background-image: linear-gradient(to bottom, #FFE261, #ffeb94);
+  width: 185px;
+  height: 50px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  font-size: 18px;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+  border: none;
+  display: block;
+}
+@keyframes show {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+#chat {
+  position: absolute;
+  display: table-cell;
+  width: 460px;
+  height: 660px;
+  bottom: 0;
+  left: 10px;
+  vertical-align: bottom;
+}
+#chat > .container {
+  display: inline-block;
+  max-height: 600px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+#chat .flex-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: stretch;
+}
+#chat .field-container {
+  animation: show 500ms forwards linear;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-bottom: 20px;
+  order: -1;
+  flex-shrink: 0;
+  height: 60px;
+  word-break: break-word;
+}
+#chat .field-container.for-input {
+  order: 1;
+  padding-bottom: 0;
+  padding-top: 0;
+  animation: none;
+}
+#chat .field-container.for-input input[name="message"]:focus {
+  box-shadow: 2px 2px 15px 0 rgba(0, 0, 0, 0.3);
+}
+#chat .field-container .circle {
+  display: inline-block;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  background: rgba(14, 14, 14, 0.4);
+}
+#chat .field-container .message {
+  display: inline-block;
+  width: 360px;
+  margin-left: 20px;
+  border-radius: 25px;
+  background: rgba(14, 14, 14, 0.4);
+  height: 60px;
+  padding: 10px 15px;
+  box-sizing: border-box;
+  color: white;
+  outline: none;
+  border: none;
+  font-size: 18px;
+}
