@@ -1,6 +1,18 @@
 var elemFullScreen = document.getElementsByClassName('ytp-fullscreen-button');
 var flag = 1;
 var container = document.createElement('div');
+const newHtml = `
+<div id="chat">
+  <div class="container">
+    <div class="flex-wrapper">
+    </div>
+  </div>
+  <div class="field-container for-input">
+    <div class="circle"></div>
+    <input type="text" class="message" placeholder="Введите сообщение" id="message-field" name="message">
+  </div>
+</div>
+`;
 elemFullScreen[0].addEventListener("click", function(){
 	if (document.querySelector('[aria-label="Проигрыватель YouTube"]')!=null){
 		if(flag>0){
@@ -43,18 +55,7 @@ bod.insertAdjacentHTML('beforeend', `
 let chat = document.querySelector("#chat");
 chat.style.display = 'none';*/
 var bod = document.getElementsByTagName('body')[0];
-bod.insertAdjacentHTML('beforeend', `
-<div id="chat">
-  <div class="container">
-    <div class="flex-wrapper">
-    </div>
-  </div>
-  <div class="field-container for-input">
-    <div class="circle"></div>
-    <input type="text" class="message" placeholder="Введите сообщение" id="message-field" name="message">
-  </div>
-</div>
-`);
+bod.insertAdjacentHTML('beforeend', newHtml);
 let chat = document.querySelector("#chat");
 chat.style.display = 'none';
 function addMessage(message) {
@@ -72,9 +73,7 @@ function addMessage(message) {
     let chat_container = document.querySelector("#chat > .container");
     chat_container.scrollTop = chat_container.scrollHeight;
 }
-
 let input = document.getElementById("message-field");
-
 input.onkeypress = function (event) {
     if(event.which === 13) {
         let message = this.value;
@@ -93,5 +92,4 @@ container.onmouseout = function(){
 	let chat = document.querySelector("#chat");
 	chat.style.display = 'inline';
 	let chat_container = document.querySelector("#chat .field-container");
-	chat_container.style.bottom = '0%';
 };
