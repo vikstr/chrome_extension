@@ -98,7 +98,7 @@ body {
   position:absolute;
   display: inline-block;
   bottom:60px;
-  max-height: 600px;
+  max-height: 350px;
   overflow-y: auto;
   overflow-x: hidden;
 }
@@ -150,4 +150,30 @@ body {
   outline: none;
   border: none;
   font-size: 18px;
+}
+
+#chat .container::-webkit-scrollbar {
+  width: 8px;
+  /*background: rgba(14, 14, 14, 0.4);*/
+}
+
+#chat .container::-webkit-scrollbar-thumb{
+  border-width:1px 1px 1px 2px;
+  border-color: #777;
+  background-color: #aaa;
+}
+
+#chat .container::-webkit-scrollbar-thumb:hover{
+  border-width: 1px 1px 1px 2px;
+  border-color: #555;
+  background-color: #777;
+}
+
+#chat .container::-webkit-scrollbar-track{
+  border-width:0;
+}
+
+#chat .container::-webkit-scrollbar-track:hover{
+  border-left: solid 1px #aaa;
+  background-color: #eee;
 }
