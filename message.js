@@ -1,6 +1,13 @@
+chrome.storage.sync.get("token", function() {
+    if (chrome.runtime.error) {
+      console.log("Runtime error.");
+    }
+	
+});
 var elemFullScreen = document.getElementsByClassName('ytp-fullscreen-button');
 var flag = 1;
 var container = document.createElement('div');
+var img = document.createElement("IMG");
 const newHtml = `
 <div id="chat">
   <div class="container">
@@ -66,7 +73,22 @@ function addMessage(message) {
     message_div.classList.add("message");
     message_div.textContent = message;
     let div_container = document.createElement("div");
+	let img = document.createElement("img");
+	/*chrome.storage.sync.get("image", function(items) {
+		if (!chrome.runtime.error) {
+			img.setAttribute('src', items.data);
+		}
+		else {
+			img.setAttribute('src', 'https://62.img.avito.st/640x480/4097554062.jpg');	
+		}
+	});*/
+	img.setAttribute('src', 'https://62.img.avito.st/640x480/4097554062.jpg');	
     div_container.classList.add("field-container");
+	img.style.display='inline-block';
+	img.style.width='60px';
+	img.style.height='60px';
+	img.style.borderRadius = '50%';
+	circle.appendChild(img);
     div_container.appendChild(circle);
     div_container.appendChild(message_div);
     chat.appendChild(div_container);

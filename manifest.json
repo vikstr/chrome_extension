@@ -8,6 +8,15 @@
 		"default_popup": "popup.html",
 		"default_title": "emovi.live"
 	},
+  "permissions": [
+    "identity", "storage"
+  ]/*,
+	"background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": false
+  }*/,
   "content_scripts": [
     {
       "matches": ["https://www.youtube.com/*"],
@@ -15,5 +24,9 @@
       "js" : ["message.js"],
       "run_at": "document_end"
     }
-  ]
+  ],
+  "oauth2": {
+    "client_id": "ClientIDFromGoogleAPIConsole",
+    "scopes":["https://www.googleapis.com/auth/contacts.readonly"]
+  }
 }
