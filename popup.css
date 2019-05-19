@@ -33,10 +33,24 @@
   font-size: 18px;
   border: 1px solid black;
 }
-#user-window .container input[name="password"] {
+/*#user-window .container input[name="password"] {
   margin-top: 20px;
+}*/
+#user-window .container label[for="field-file"] {
+  font-size: 20px;
+  text-align: center;
+  display: block;
+  margin-top: 30px;
+  cursor: pointer;
+  background: url("cloud.svg") no-repeat 10px center;
+  background-clip: unset;
+  height: 40px;
+  line-height: 40px;
+  vertical-align: middle;
 }
-
+#user-window .container input[type="file"] {
+  display: none;
+}
 #user-window .container button {
   margin-top: 25px;
   outline: none;
